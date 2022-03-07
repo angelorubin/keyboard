@@ -1,230 +1,255 @@
-var res = document.querySelector('#res')
+var res = document.querySelector("#res");
 
 function zero() {
-    res.textContent += '0'
+	res.textContent += "0";
 }
 
 function one() {
-    res.textContent += `1`
+	res.textContent += `1`;
 }
 
 function two() {
-    res.textContent += `2`
+	res.textContent += `2`;
 }
 
 function three() {
-    res.textContent += '3'
+	res.textContent += "3";
 }
 
 function four() {
-    res.textContent += '4'
+	res.textContent += "4";
 }
 
 function five() {
-    res.textContent += '5'
+	res.textContent += "5";
 }
 
 function six() {
-    res.textContent += '6'
+	res.textContent += "6";
 }
 
 function seven() {
-    res.textContent += '7'
+	res.textContent += "7";
 }
 
 function eight() {
-    res.textContent += '8'
+	res.textContent += "8";
 }
 
-function nine(){
-    res.textContent += '9'
+function nine() {
+	res.textContent += "9";
 }
 
 function Q() {
-    res.textContent += 'q'
+	res.textContent += "q";
 }
 
 function W() {
-    res.textContent += 'w'
+	res.textContent += "w";
 }
 
 function E() {
-    res.textContent += 'e'
+	res.textContent += "e";
 }
 
 function R() {
-    res.textContent += 'r'
+	res.textContent += "r";
 }
 
 function T() {
-    res.textContent += 't'
+	res.textContent += "t";
 }
 
 function Y() {
-    res.textContent += 'y'
+	res.textContent += "y";
 }
 
 function U() {
-    res.textContent += 'u'
+	res.textContent += "u";
 }
 
 function I() {
-    res.textContent += 'i'
+	res.textContent += "i";
 }
 
 function O() {
-    res.textContent += 'o'
+	res.textContent += "o";
 }
 
 function P() {
-    res.textContent += 'p'
-}
-
-function A() {
-    res.textContent += 'a'
+	res.textContent += "p";
 }
 
 function S() {
-    res.textContent += 's'
+	res.textContent += "s";
 }
 
 function D() {
-    res.textContent += 'd'
+	res.textContent += "d";
 }
 
 function F() {
-    res.textContent += 'f'
+	res.textContent += "f";
 }
 function G() {
-    res.textContent += 'g'
+	res.textContent += "g";
 }
 
 function H() {
-    res.textContent += 'h'
+	res.textContent += "h";
 }
 
 function J() {
-    res.textContent += 'j'
+	res.textContent += "j";
 }
 
 function K() {
-    res.textContent += 'k'
+	res.textContent += "k";
 }
 
 function L() {
-    res.textContent += 'l'
+	res.textContent += "l";
 }
 
 function Ç() {
-    res.textContent += 'ç'
+	res.textContent += "ç";
 }
 
 function Z() {
-    res.textContent += 'z'
+	res.textContent += "z";
 }
 
 function X() {
-    res.textContent += 'x'
+	res.textContent += "x";
 }
 
 function C() {
-    res.textContent += 'c'
+	res.textContent += "c";
 }
 
 function V() {
-    res.textContent += 'v'
+	res.textContent += "v";
 }
 
 function B() {
-    res.textContent += 'b'
+	res.textContent += "b";
 }
 
 function N() {
-    res.textContent += 'n'
+	res.textContent += "n";
 }
 
 function M() {
-    res.textContent += 'm'
+	res.textContent += "m";
 }
 
 function acento() {
-    res.textContent += '´'
+	res.textContent += "´";
 }
 
 function abrirChave() {
-    res.textContent += '{' 
+	res.textContent += "{";
 }
 
 function fecharChave() {
-    res.textContent += '}'
+	res.textContent += "}";
 }
 
 function abrirColchete() {
-    res.textContent += '['
+	res.textContent += "[";
 }
 
 function fecharColchete() {
-    res.textContent += ']'
+	res.textContent += "]";
 }
 
 function underline() {
-    res.textContent += '_'
+	res.textContent += "_";
 }
 
 function menos() {
-    res.textContent += '-'
+	res.textContent += "-";
 }
 
 function mais() {
-    res.textContent += '+'
+	res.textContent += "+";
 }
 
 function igual() {
-    res.textContent += '='
+	res.textContent += "=";
 }
 
 function interrogação() {
-    res.textContent += '?'
+	res.textContent += "?";
 }
 
 function barra() {
-    res.textContent += '|'
+	res.textContent += "|";
 }
 
 function barraR() {
-    res.textContent += '/'
+	res.textContent += "/";
 }
 
 function tio() {
-    res.textContent += '^'
+	res.textContent += "^";
 }
 
 function doisPontos() {
-    res.textContent += ':'
+	res.textContent += ":";
 }
 
 function maior() {
-    res.textContent += '<'
+	res.textContent += "<";
 }
 
 function menor() {
-    res.textContent += '>'
+	res.textContent += ">";
 }
 
 function aspas() {
-    res.textContent += '"'
+	res.textContent += '"';
 }
 
 function espaço() {
-    res.textContent += ' '
+	res.textContent += " ";
 }
 
 function backspace() {
-    var res = document.getElementById('res').innerHTML
-    document.getElementById('res').innerHTML = res.substring(0, res.length - 1)
+	var res = document.getElementById("res").innerHTML;
+	document.getElementById("res").innerHTML = res.substring(0, res.length - 1);
 }
 
-function enter(){
-    var res = document.getElementById('res').innerHTML
-    alert(res)
+function enter() {
+	var res = document.getElementById("res").innerHTML;
+	alert(res);
+}
+
+/**
+ * Caps Lock
+ */
+
+function A() {
+	if (getCapsLockState() == "on") {
+		res.textContent += "A";
+	} else {
+		res.textContent += "a";
+	}
+}
+
+function getCapsLockState() {
+	const capsLockStateIcon = document.querySelector(".caps-lock-state-icon");
+	const capsLockState = capsLockStateIcon.classList.item(1);
+	return capsLockState;
+}
+
+function capslk() {
+	const capsLockState = document.querySelector(".caps-lock-state-icon");
+	if (capsLockState.classList.contains("off")) {
+		capsLockState.classList.remove("off");
+		capsLockState.classList.add("on");
+	} else {
+		capsLockState.classList.remove("on");
+		capsLockState.classList.add("off");
+	}
 }
