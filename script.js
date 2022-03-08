@@ -266,8 +266,8 @@ function getCapsLockState() {
 }
 
 /**
- * Ao clicar no botão capsLock no teclado esta função que modifica o valor (da classe)
- * para (on ou off) do icon sinalizador de acordo com o estado atual ele faz a inversão
+ * Ao clicar no botão capsLock no teclado esta função adiciona a classe (on ou off) na classe (.caps-lock-state-icon),
+ * e de acordo com o estado atual ele faz a inversão, se estiver on fica off e vice versa.
  */
 function capslk() {
 	const capsLockState = document.querySelector(".caps-lock-state-icon");
