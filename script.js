@@ -80,10 +80,6 @@ function P() {
 	res.textContent += "p";
 }
 
-function S() {
-	res.textContent += "s";
-}
-
 function D() {
 	res.textContent += "d";
 }
@@ -211,7 +207,7 @@ function aspas() {
 	res.textContent += '"';
 }
 
-function espaço() {
+function espaco() {
 	res.textContent += " ";
 }
 
@@ -225,24 +221,54 @@ function enter() {
 	alert(res);
 }
 
+/******************************************************************************
+ * Controle de ações do botão CapsLock
+ ******************************************************************************/
+
 /**
- * Caps Lock
+ * Array das letras para um controle mais preciso de quais teclas
+ * devem realizar ações quando clicadas.
  */
+const letters = ["A", "S"];
 
-function A() {
-	if (getCapsLockState() == "on") {
-		res.textContent += "A";
-	} else {
-		res.textContent += "a";
+// Capturando o evento de clique de qualquer elemento do documento
+document.addEventListener("click", (e) => {
+	// função para capturar o estado do botão capslock (on ou off)
+	const capsLockState = getCapsLockState();
+
+	const foundIndex = [];
+
+	let idx = letters.indexOf(e.target.textContent);
+
+	// Filtrando o index de qual elemento foi clicado
+	while (idx != -1) {
+		foundIndex.push(idx);
+		idx = letters.indexOf(e.target.textContent, idx + 1);
 	}
-}
 
+	if (foundIndex.length > 0) {
+		// De acordo com o estado do botão capsLock
+		if (capsLockState === "off") {
+			//  transformamos a letra para minúscula
+			res.textContent += letters[foundIndex].toLowerCase();
+		} else {
+			//  transformamos a letra para maiúscula
+			res.textContent += letters[foundIndex]?.toUpperCase();
+		}
+	}
+});
+
+// Função que pega o estado atual do icon sinalizador e retorna se está (on ou off)
 function getCapsLockState() {
 	const capsLockStateIcon = document.querySelector(".caps-lock-state-icon");
 	const capsLockState = capsLockStateIcon.classList.item(1);
 	return capsLockState;
 }
 
+/**
+ * Ao clicar no botão capsLock no teclado esta função que modifica o valor (da classe)
+ * para (on ou off) do icon sinalizador de acordo com o estado atual ele faz a inversão
+ */
 function capslk() {
 	const capsLockState = document.querySelector(".caps-lock-state-icon");
 	if (capsLockState.classList.contains("off")) {
